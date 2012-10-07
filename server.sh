@@ -4,7 +4,7 @@ var http = require('http'),
     url = require('url'),
     exec = require('child_process').exec;
 
-var host = "dev.artefactgroup.com",
+var host = "www.yourdomain.com",
     port = "8088",
     thisServerUrl = "http://" + host + ":" + port;
 
