@@ -6,7 +6,8 @@ var http = require('http'),
 
 var host = "www.yourdomain.com",
     port = "8088",
-    thisServerUrl = "http://" + host + ":" + port;
+    thisServerUrl = "http://" + host + ":" + port,
+    secret_key = "REPLACE_WITH_YOUR_SECRET";
 
 /* The sites that are being continuously integrated.
  * Add new site definition here and specify the updateCmd to be run when a post recieve hook is invoked
@@ -19,7 +20,13 @@ http.createServer(function (req, res) {
 
   var parsedUrl = url.parse(req.url, true);
   var siteId = parsedUrl.query['site'];
- 
+  
+  if(parsedUrl.query['secret_key'] != secret_key) {
+    res.writeHead(401, "Not Authorized", {'Content-Type': 'text/html'});
+    res.end('401 - Not Authorized');
+    return;
+  }
+
   switch(parsedUrl.pathname) {
     case '/':
       res.writeHead(501, "Not implemented", {'Content-Type': 'text/html'});
