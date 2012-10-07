@@ -1,7 +1,7 @@
 rscds
 =====
 
-A really simple continuous deployment server. 
+A really simple continuous deployment (continuous integration) server. 
 
 How to use RSCDS
 ----------------
