@@ -10,7 +10,7 @@ How to use RSCDS
 2. Copy and modify this script to match your site configuration and domain(s)
 3. Add a post recieve hook to your github repo and point it to your node server URL. The webhook URL must be like
 
-    http://www.yourdomain.com:8088/update?site=wwwstage
+    http://www.yourdomain.com:8088/update?site=wwwstage&secret_key=YOUR_SECRET_KEY
     
 where, wwwstage is a site defined in your siteMap.
 
