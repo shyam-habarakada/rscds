@@ -18,4 +18,4 @@ where, wwwstage is a site defined in your siteMap.
 
 4. Start the node server
 
-Ideally, you want to configure the node server to un as a daemon.
+Ideally, you want to configure the node server to run as a daemon.
